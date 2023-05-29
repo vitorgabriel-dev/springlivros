@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head> 
+	<title>Spring Boot Livros</title>
+</head>
+<body>	
+	<h3>Lista de livros </h3>	
+	<p>	Titulo&emsp;&emsp;Autor&emsp;&emsp;Editora&emsp;&emsp;Ano de publicação&emsp;&emsp;ISBN 	</p>	<hr>	
+	<div th:each="livro : ${livros}">		
+		<div class="row">				
+			 <p>
+				<span th:text="${livro.titulo}"></span> &emsp;
+			 	<span th:text="${livro.autor}"></span>&emsp;
+			 	<span th:text="${livro.editora}"></span>&emsp;
+			 	<span th:text="${livro.ano}"></span>&emsp;
+			 	<span th:text="${livro.isbn}"></span>&emsp;
+			 </p>
+		</div>
+	</div>
+</body>
+</html>
